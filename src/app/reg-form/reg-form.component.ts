@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl,  } from '@angular/forms';
+import {FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-reg-form',
@@ -11,7 +11,19 @@ export class RegFormComponent implements OnInit {
   Regsitration = new FormControl(' ')
   constructor() { }
 
+  RegisterForm = new FormGroup({
+    Name: new FormControl(''),
+    designation :new FormControl(''),
+  })
+
   ngOnInit(): void {
   }
+  //To Submit Form
+OnSubmit(): void {
 
+}
+// To cleare Form
+clearForm(): void {
+  
+}
 }
